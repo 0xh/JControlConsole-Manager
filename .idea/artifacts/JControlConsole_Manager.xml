@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" build-on-make="true" name="JControlConsole Manager">
+    <output-path>$PROJECT_DIR$/out/artifacts/JControlConsole_Manager</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="alias" value="" />
+        <option name="appClass" value="JControlConsole" />
+        <option name="convertCss2Bin" value="true" />
+        <option name="description" value="Java Console Console Manager is a Java version of CCAPI. This Application is designed to work on all platforms. Linux, Mac And Windows" />
+        <option name="enabledSigning" value="true" />
+        <option name="htmlParamFile" value="" />
+        <option name="keystore" value="" />
+        <option name="nativeBundle" value="all" />
+        <option name="paramFile" value="" />
+        <option name="title" value="Java Control Console Manager" />
+        <option name="vendor" value="Mr Smithy x" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="GTAV_RJTM.jar">
+        <element id="module-output" name="JConsoleConsole Manager" />
+      </element>
+      <element id="library" level="project" name="JCCAPILib" />
+    </root>
+  </artifact>
+</component>

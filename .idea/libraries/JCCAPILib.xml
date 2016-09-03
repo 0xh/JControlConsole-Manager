@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="JCCAPILib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/JCCAPILib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

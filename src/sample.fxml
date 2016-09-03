@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<TabPane prefHeight="498.0" prefWidth="745.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <tabs>
+        <Tab text="JControlConsole">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="745.0" style="-fx-background-color: #222;">
+                    <children>
+                        <Pane layoutX="583.0" layoutY="194.0" prefHeight="142.0" prefWidth="150.0" style="-fx-background-color: #333; -fx-border-color: #444;">
+                            <children>
+                                <ComboBox fx:id="led_color_combo" layoutX="14.0" layoutY="38.0" prefHeight="25.0" prefWidth="119.0" promptText="Color" />
+                                <Button fx:id="led_btn" layoutX="15.0" layoutY="104.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Execute" />
+                                <Label layoutX="17.0" layoutY="12.0" text="Console LED" textFill="WHITE" />
+                                <ComboBox fx:id="led_status_combo" layoutX="14.0" layoutY="71.0" prefHeight="25.0" prefWidth="119.0" promptText="Status" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="341.0" layoutY="335.0" prefHeight="117.0" prefWidth="243.0" style="-fx-background-color: #333; -fx-border-color: #444;">
+                            <children>
+                                <ComboBox fx:id="icon_combo" layoutX="14.0" layoutY="76.0" prefHeight="25.0" prefWidth="102.0" promptText="Icon" />
+                                <Button fx:id="notify_btn" layoutX="123.0" layoutY="76.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Send" />
+                                <Label layoutX="17.0" layoutY="12.0" text="Notify The Playstation 3 Console" textFill="WHITE" />
+                                <TextField fx:id="notify_edit_text" layoutX="15.0" layoutY="38.0" prefHeight="25.0" prefWidth="215.0" promptText="Message Here" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="341.0" layoutY="14.0" prefHeight="322.0" prefWidth="243.0" style="-fx-background-color: #333; -fx-border-color: #444;">
+                            <children>
+                                <TableView fx:id="console_info_list" layoutX="9.0" layoutY="10.0" prefHeight="302.0" prefWidth="224.0" style="-fx-background-color: #555;">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="Key">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="Ckey" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn prefWidth="148.0" text="Value">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="Cval" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                    <contextMenu>
+                                        <ContextMenu fx:id="console_info_context" />
+                                    </contextMenu>
+                                </TableView>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="583.0" layoutY="78.0" prefHeight="117.0" prefWidth="150.0" style="-fx-background-color: #333; -fx-border-color: #444;">
+                            <children>
+                                <ComboBox fx:id="buzzer_combo" layoutX="14.0" layoutY="38.0" prefHeight="25.0" prefWidth="118.0" promptText="Buzzer Type" />
+                                <Button fx:id="buzzer_btn" layoutX="15.0" layoutY="76.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Execute" />
+                                <Label layoutX="17.0" layoutY="12.0" text="Console Buzzer" textFill="WHITE" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="583.0" layoutY="335.0" prefHeight="117.0" prefWidth="150.0" style="-fx-background-color: #333; -fx-border-color: #444;">
+                            <children>
+                                <ComboBox fx:id="shut_combo" layoutX="14.0" layoutY="38.0" prefHeight="25.0" prefWidth="119.0" promptText="Modes" />
+                                <Button fx:id="shut_btn" layoutX="15.0" layoutY="76.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Execute" />
+                                <Label layoutX="17.0" layoutY="12.0" text="Shutdown Modes" textFill="WHITE" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="12.0" layoutY="335.0" prefHeight="117.0" prefWidth="330.0" style="-fx-background-color: #333; -fx-border-color: #444;">
+                            <children>
+                                <Button fx:id="set_psid_btn" layoutX="209.0" layoutY="76.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Set PSID" />
+                                <Label layoutX="17.0" layoutY="12.0" text="Console PSID Changer" textFill="WHITE" />
+                                <TextField fx:id="psid_edit_text" layoutX="15.0" layoutY="38.0" prefHeight="25.0" prefWidth="182.0" promptText="PSID Here (32 digit)" />
+                                <Button fx:id="set_boot_psid_btn" layoutX="15.0" layoutY="76.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="Set Boot PSID" />
+                                <Button fx:id="reset_psid_btn" layoutX="209.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Reset PSID" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="12.0" layoutY="219.0" prefHeight="117.0" prefWidth="330.0" style="-fx-background-color: #333; -fx-border-color: #444;">
+                            <children>
+                                <Button fx:id="set_idps_btn" layoutX="209.0" layoutY="76.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Set IDPS" />
+                                <Label layoutX="17.0" layoutY="12.0" text="Console IDPS Changer" textFill="WHITE" />
+                                <TextField fx:id="idps_edit_text" layoutX="15.0" layoutY="38.0" prefHeight="25.0" prefWidth="179.0" promptText="IDPS Here (32 digit)" />
+                                <Button fx:id="set_boot_idps_btn" layoutX="15.0" layoutY="76.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="Set Boot IDPS" />
+                                <Button fx:id="reset_idps_btn" layoutX="209.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Reset IDPS" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="12.0" layoutY="14.0" prefHeight="206.0" prefWidth="330.0" style="-fx-background-color: #333; -fx-border-color: #444;">
+                            <children>
+                                <Label layoutX="17.0" layoutY="15.0" text="Consoles" textFill="WHITE" />
+                                <TableView fx:id="console_list" layoutX="13.0" layoutY="44.0" prefHeight="148.0" prefWidth="304.0" style="-fx-background-color: #555;">
+                                    <columns>
+                                        <TableColumn prefWidth="302.0" text="IP Address">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="ConsoleIP" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                    <contextMenu>
+                                        <ContextMenu fx:id="console_context" />
+                                    </contextMenu>
+                                </TableView>
+                                <Button fx:id="find_console_btn" layoutX="202.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Find Console" />
+                            </children>
+                        </Pane>
+                        <Hyperlink fx:id="hyperlink_http" layoutX="616.0" layoutY="30.0" text="Mr Smithy x" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="GTA RTM">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #222;">
+               <children>
+                  <Pane layoutX="14.0" layoutY="271.0" prefHeight="180.0" prefWidth="184.0" style="-fx-background-color: #333;">
+                     <children>
+                        <CheckBox fx:id="gta_rtm_godmode" layoutX="14.0" layoutY="34.0" mnemonicParsing="false" text="God Mode" textFill="WHITE" />
+                        <CheckBox fx:id="gta_rtm_neverwanted" layoutX="14.0" layoutY="63.0" mnemonicParsing="false" text="Never wanted" textFill="WHITE" />
+                        <CheckBox fx:id="gta_rtm_unlammo" layoutX="14.0" layoutY="91.0" mnemonicParsing="false" text="Unlimited Ammo" textFill="WHITE" />
+                        <CheckBox fx:id="gta_rtm_cardon" layoutX="14.0" layoutY="120.0" mnemonicParsing="false" text="Carmageddon" textFill="WHITE" />
+                        <CheckBox fx:id="gta_rtm_superjump" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" text="Super Jump" textFill="WHITE" />
+                        <Label layoutX="71.0" layoutY="11.0" text="RTM" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="106.0" layoutY="46.0" text="JCCAPILib is a java client library for CCAPI v 2.70 and up.&#10;This is not dependent on Windows. Its a direct connection&#10;to the PS3. This Java Client library was made by Mr Smithy x&#10;&#10;Down below is a sample of using JCCAPILib setting memory" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
